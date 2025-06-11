@@ -17,6 +17,9 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 
     @Override
     protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+
+        registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
+
         MultipartConfigElement multipartConfig = new MultipartConfigElement(
                 LOCATION, // 업로드 처리 디렉토리 경로
                 MAX_FILE_SIZE,// 업로드 가능한 파일 하나의 최대 크기
