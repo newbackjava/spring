@@ -1,6 +1,5 @@
 package org.scoula.security;
 
-
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,25 +11,27 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {RootConfig.class, SecurityConfig.class})
+@ContextConfiguration(classes = {
+        RootConfig.class,
+        SecurityConfig.class
+})
 @Log4j2
 public class PasswordEncoderTest {
 
+    //싱글톤으로 만든 암호화해주는 객체를 주입
     @Autowired
-    private PasswordEncoder pwEncoder;
+    private PasswordEncoder encoder;
 
     @Test
-    public void testEncode() {
-        String str = "1234";
+    public void test1() {
+        String result1 = encoder.encode("1234");
+        log.info("result1: " + result1);
+        log.info(encoder.matches("1234", result1));
 
-        String enStr = pwEncoder.encode(str);        // 암호화
-        log.info("password: " + enStr);
-
-        String enStr2 = pwEncoder.encode(str);        // 암호화
-        log.info("password: " + enStr2);
-
-        log.info("match :" + pwEncoder.matches(str, enStr));        // 비밀번호 일치 여부 검사
-        log.info("match :" + pwEncoder.matches(str, enStr2));    // 비밀번호 일치 여부 검사
+        String result2 = encoder.encode("1234");
+        log.info("result2: " + result2);
+        log.info(encoder.matches("1234", result2));
     }
+
 
 }

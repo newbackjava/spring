@@ -15,16 +15,21 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ContextConfiguration(classes = {RootConfig.class, SecurityConfig.class})
 @Log4j2
 public class UserDetailsMapperTest {
+
     @Autowired
     private UserDetailsMapper mapper;
 
     @Test
     public void get() {
+
         MemberVO member = mapper.get("admin");
         log.info(member);
-
         for (AuthVO auth : member.getAuthList()) {
+
             log.info(auth);
+
         }
+
     }
+
 }

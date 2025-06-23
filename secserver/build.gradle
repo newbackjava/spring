@@ -13,8 +13,8 @@ repositories {
 ext {
     junitVersion = '5.10.2'
     springVersion = '5.3.37'
-    springSecurityVersion = '5.8.13'
     lombokVersion = '1.18.30'
+    springSecurityVersion = '5.8.13'
 }
 
 sourceCompatibility = '1.17'
@@ -31,6 +31,12 @@ dependencies {
             { exclude group: 'commons-logging', module: 'commons-logging' }
     implementation "org.springframework:spring-webmvc:${springVersion}"
     implementation 'javax.inject:javax.inject:1'
+
+    // 보안
+    implementation("org.springframework.security:spring-security-web:${springSecurityVersion}")
+    implementation("org.springframework.security:spring-security-config:${springSecurityVersion}")
+    implementation("org.springframework.security:spring-security-core:${springSecurityVersion}")
+    implementation("org.springframework.security:spring-security-taglibs:${springSecurityVersion}")
 
     // AOP
     implementation 'org.aspectj:aspectjrt:1.9.20'
@@ -79,12 +85,6 @@ dependencies {
     implementation 'org.mybatis:mybatis:3.4.6'
     implementation 'org.mybatis:mybatis-spring:1.3.2'
 
-
-    // 보안
-    implementation("org.springframework.security:spring-security-web:${springSecurityVersion}")
-    implementation("org.springframework.security:spring-security-config:${springSecurityVersion}")
-    implementation("org.springframework.security:spring-security-core:${springSecurityVersion}")
-    implementation("org.springframework.security:spring-security-taglibs:${springSecurityVersion}")
 
     // 테스트
     testImplementation "org.springframework:spring-test:${springVersion}"

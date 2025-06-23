@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 import java.util.List;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class MemberVO {
     private String username;
     private String password;
@@ -17,6 +17,7 @@ public class MemberVO {
     private Date regDate;
     private Date updateDate;
 
-    private List<AuthVO> authList;        // 권한 목록, join 처리 필요
-
+    //Auth테이블의 role(auth컬럼)이 여러개가 필요
+    //member의 username과 auth 는 1:다
+    private List<AuthVO> authList;
 }

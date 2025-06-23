@@ -8,18 +8,17 @@
 </head>
 <body>
 <h1>환영합니다.</h1>
-
-<sec:authorize access="isAnonymous()"> <!-- 로그인 안한 경우 -->
-    <a href="/security/login">로그인</a>
+<body bgcolor="#adff2f">
+<sec:authorize access="isAnonymous()">
+    <a href="/security/login">로그인페이지로 </a>
 </sec:authorize>
 
-<sec:authorize access="isAuthenticated()"> <!-- 로그인 한 경우 -->
+<sec:authorize access="isAuthenticated()">
     <sec:authentication property="principal.username"/>
     <form action="/security/logout" method="post">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <input type="submit" value="로그아웃"/>
     </form>
 </sec:authorize>
-
 </body>
 </html>
