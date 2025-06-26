@@ -8,3 +8,6 @@ https://drive.google.com/drive/folders/1i1fo0UTC0EgIPY0TYCla284PwWWwdzv8?usp=sha
 
 ### apiserver
 https://drive.google.com/drive/folders/1BPOx6JBfV_Ak6b33pTubVVSCsytnYrqR?usp=sharing
+
+### frontend + backend 준비
+https://drive.google.com/drive/folders/1Nv5mWPlC6_HA3wTnKz_LlU-MWl7vUa2c?usp=sharing
