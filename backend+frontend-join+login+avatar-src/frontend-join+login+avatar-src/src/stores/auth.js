@@ -32,6 +32,26 @@ export const useAuthStore = defineStore('auth', () => {
         state.value = { ...data };
 
 
+        
+        ////////////////////////////////////
+
+    // @Log4j2
+    // @Component
+    // public class JwtUsernamePasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+
+    //     public JwtUsernamePasswordAuthenticationFilter(
+    //             AuthenticationManager authenticationManager,
+    //             LoginSuccessHandler loginSuccessHandler,
+    //             LoginFailureHandler loginFailureHandler) {
+    //         super(authenticationManager);
+    //         setFilterProcessesUrl("/api/auth/login"); //필터적용 주소(****)
+    //         setAuthenticationSuccessHandler(loginSuccessHandler); //성공했을 때
+    //         setAuthenticationFailureHandler(loginFailureHandler);  //실패했을 때
+    //     }
+
+        //////////////////////////////////
+        
+
         localStorage.setItem('auth', JSON.stringify(state.value));
     };
 
