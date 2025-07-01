@@ -11,3 +11,6 @@ https://drive.google.com/drive/folders/1BPOx6JBfV_Ak6b33pTubVVSCsytnYrqR?usp=sha
 
 ### frontend + backend 준비
 https://drive.google.com/drive/folders/1Nv5mWPlC6_HA3wTnKz_LlU-MWl7vUa2c?usp=sharing
+
+### 회원가입 + 로그인 + 수정까지
+https://drive.google.com/file/d/1Vd4iDDJQPTPExxmyU0Cq9jutwoaTJoYQ/view?usp=sharing
