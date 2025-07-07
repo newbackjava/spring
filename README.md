@@ -20,3 +20,6 @@ https://drive.google.com/drive/folders/1hqINHGAvsLIzeBL_t8V1dnZVjgFKTEcw?usp=sha
 
 ### :dart: frontend-회원+게시판-페이징까지-수업중생성
 https://drive.google.com/drive/folders/1ig2mZz03VDlZXKQZGRK8NSuDlxzsredz?usp=sharing
+
+### :dart: frontend-회원+게시판+travel-수업중생성
+https://drive.google.com/drive/folders/1jNcqwUe4ZwGcwMnOrOB1sBdcJ31OKW8H?usp=sharing
